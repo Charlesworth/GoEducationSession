@@ -1,0 +1,24 @@
+// if
+if x > 0 {
+  return y
+}
+
+// for
+for init; condition; post { }
+
+// for implementing a while loop
+for condition { }
+
+// for implenting a continuous loop
+for { }
+
+// for iterating through a Map structure
+for key, value := range oldMap {newMap[key] = value}
+
+// switch
+switch time.Now().Weekday() {
+    case time.Saturday, time.Sunday:
+        fmt.Println("it's the weekend")
+    default:
+        fmt.Println("it's a weekday")
+}

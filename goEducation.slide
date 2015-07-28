@@ -1,0 +1,103 @@
+Go Education Session
+
+Charles Cochrane
+
+github.com/Charlesworth
+
+* Go's goals
+
+- Very fast compilation.
+- For use in big teams: easily readable and quick to learn.
+- Simple dependancy management.
+- No type hierarchy, static types.
+- Fully garbage-collected.
+- Fundamental support for concurrent execution and communication.
+- Built for system software on multicore machines.
+
+* Used by:
+
+-	Google
+- Docker
+- Dropbox
+- Cloud Foundry
+- CloudFlare
+- IBM...
+
+* Back to basics
+
+- no semicolons at EoL
+- := to declare and initialize
+	var a int
+	a = 3
+- var to zero value initialize
+	b := 3		//Go can infer type
+	b = a + b
+- make for types with capacity (explained later)
+
+* Types
+
+- Common types: bool, string, int, float, complex, array
+- Map
+	var numberMap = make(map[int]string) //make when type with capacity
+	numberMap[1] = "one"
+	fmt.Println(numberMap[1])
+- Slice
+	bestLanguage := []string{"g", "o"}   //could also use make
+	bestLanguage = AppendByte(p, "l", "a", "n", "g")
+- Struct	(explained later)
+- Pointer (explained later)
+- Channel (explained later)
+
+* Control structures
+
+.code control.goex
+
+* Simple Example
+
+.play example1.go /^func/,/^}/,/^}/
+
+* stdlib
+
+- high quality
+- readable and well commented
+- fully implemented in go
+
+* Functions
+
+- multiple returns
+- _ = blank identifier, it discards the variable
+- supports anonymous functions, which can form closures
+.code func.goex
+
+* Pointers
+- Go supports pointers, allowing you to pass references to values
+.code pointer.goex
+- Pointers are always safe
+- NO pointer arithmatic
+
+* Structs
+
+- Structs are typed collections of fields
+.code struct.goex
+
+- declare a function on a type to make a method
+	func (p person) age() int { return p.age }
+
+* OO Example
+
+.play methods.go
+
+* Concurrency
+
+- go
+- channel
+- sync
+- CPU.maxCount
+
+* Example: Go Routines
+
+.play csp.go /^var/,/^func helloWorld/,/^}/
+
+* Example 2: Go Routines
+
+.play csp2.go /^func ping/,/^func pong/,/^}/

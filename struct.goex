@@ -1,0 +1,8 @@
+//The person struct type has name and age fields
+type person struct {
+ name string
+ age  int
+}
+
+s := person{name: "Charlie", age: 24}
+fmt.Println(s.name)       //output: Charlie

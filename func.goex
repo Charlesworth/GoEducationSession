@@ -1,0 +1,10 @@
+//plus() has two input vars and a single output var
+func plus(a int, b int) int {
+    // Go requires explicit returns
+    return a + b
+}
+
+//vals() shows no input vars while (int, int) shows the function returns 2 ints.
+func vals() (int, int) {
+    return 3, 7
+}

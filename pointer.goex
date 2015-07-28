@@ -1,0 +1,9 @@
+i := 1
+
+// Declare type pointer iPtr
+var iPtr *int
+
+// The `&i` syntax gives the memory address of `i`,
+iPtr = &i
+
+fmt.Println(iPtr)  //output: 0x1043617c
