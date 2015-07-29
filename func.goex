@@ -8,3 +8,6 @@ func plus(a int, b int) int {
 func vals() (int, int) {
     return 3, 7
 }
+
+//only "a" will be initalized 
+_, a := vals()

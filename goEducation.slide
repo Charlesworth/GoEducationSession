@@ -89,15 +89,28 @@ github.com/Charlesworth
 
 * Concurrency
 
-- go
-- channel
-- sync
-- CPU.maxCount
+- its easy, the language was built with it in mind
+- goroutines offer simple, lightweight (kind of) threading
+- great sync package for thread safe types
+- CPU.maxCount sets how many cores the application can use
+- channel type for goroutine communication
 
-* Example: Go Routines
+* Goroutines
+
+- a function executing concurrently with other goroutines in the same address space.
+- multiplexed onto OS threads so if one blocks, such as while waiting for I/O, others can continue
+- 'go' prefixing a function call will run it as a goroutine.
+	hello() 		//synchronus function call
+	go hello() 	//goroutine function call
+- when complete, goroutines exit silently
+
+* Channels
+
+- can be unbuffered (synchronising) or buffered
+- are first-class values that can be allocated and passed around
 
 .play csp.go /^var/,/^func helloWorld/,/^}/
 
-* Example 2: Go Routines
+* Example: concurrent comms
 
 .play csp2.go /^func ping/,/^func pong/,/^}/
